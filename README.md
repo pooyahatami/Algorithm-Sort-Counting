@@ -1,7 +1,6 @@
 # Algorithm-Sort-Counting
 Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values (kind of hashing). Then doing some arithmetic to calculate the position of each object in the output sequence.
 
- /*
  * Counting sort algorithm !
  * Class	Sorting algorithm
  * Data structure	Array
@@ -9,7 +8,6 @@ Counting sort is a sorting technique based on keys between a specific range. It 
  * Best-case performance	O(n+k) comparisons, O(1) swaps
  * Average performance	О(n+k) comparisons, swaps
  * Worst-case space complexity
- */
 
 Let us understand it with the help of an example.
 
