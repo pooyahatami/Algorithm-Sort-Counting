@@ -100,13 +100,14 @@ Other Sorting Algorithms on GeeksforGeeks/GeeksQuiz:
 
  * Selection Sort
  * Bubble Sort
- * [Insertion Sort (https://github.com/pooyahatami/Algorithm-Sort-Insertion)
+ * [Insertion Sort](https://github.com/pooyahatami/Algorithm-Sort-Insertion)
  * Merge Sort
  * Heap Sort
  * QuickSort
- * Counting Sort
+ * [Counting Sort](https://github.com/pooyahatami/Algorithm-Sort-Counting)
  * Bucket Sort
  * ShellSort
 
 References:
- * http://en.wikipedia.org/wiki/Radix_sort
+ * https://en.wikipedia.org/wiki/Counting_sort
+ * http://www.geeksforgeeks.org/counting-sort
