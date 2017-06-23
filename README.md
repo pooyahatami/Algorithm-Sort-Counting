@@ -36,6 +36,46 @@ the output sequence.
   next data 1 at an index 1 smaller than this index.
 ```
 
+About this :
+=======
+
+Only can Sort Array of integers 
+Only Sort integers between 0 and MaxRange
+Returns the Sorted Array or -1 if not found valid input.
+
+example
+=======
+
+```js
+var rectcs = require('./node-sort-counting');
+
+var arrin01 = [20, 8 , 48, 120, 220 , 390 , 1000 ];
+var arrin02 = [20, 8 , 480 , 120, 220 , 390 , 1000 ];
+var arrin03 = [1120, 800 , 480 , 120, 20 , 390 , 1000 ];
+var arrin04 = ['g', 'e', 'e', 'k', 's', 'f', 'o',
+                      'r', 'g', 'e', 'e', 'k', 's'];
+var arrin05 = [1, 3, 7, 25, 12, 9, 8,
+                      121, 221, 10, 18, 29, 49];
+
+
+function solveIS(arr,range) {
+    var arr_original = arr.toString() ;
+    var result = rectcs.countingSort(arr,range);
+    if (result==-1){
+    console.log("Fail attempt to sort array ["+arr_original+" ] by Insertion Sort " );
+    } else {
+    console.log("Success attempt to sort array ["+arr_original+" ] and result is : [ "
+                + result + " ]" );
+    }
+   
+   console.log("----------------------------------------------------------");     
+}
+
+solveIS(arrin01,1000);
+solveIS(arrin05,256);
+solveIS(arrin03,1120);
+```
+
 
 Following is C implementation of counting sort.
 ```C
