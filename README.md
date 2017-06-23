@@ -196,7 +196,7 @@ print "Sorted character array is %s"  %("".join(ans))
 Output:
 ```Sorted character array is eeeefggkkorss```
 
-Other Sorting Algorithms on GeeksforGeeks/GeeksQuiz:
+Other Sorting Algorithms :
 
  * Selection Sort
  * Bubble Sort
