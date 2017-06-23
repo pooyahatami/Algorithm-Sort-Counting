@@ -1,5 +1,7 @@
 [![Build Status](https://secure.travis-ci.org/soldair/node-binarysearch.png)](https://github.com/pooyahatami/Algorithm-Sort-Counting/)
 # Algorithm-Sort-Counting
+
+## Brief about Counting Sort 
 Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values (kind of hashing). Then doing some arithmetic to calculate the position of each object in the output sequence.
 
 ```javascript
@@ -36,16 +38,16 @@ the output sequence.
   next data 1 at an index 1 smaller than this index.
 ```
 
-About this :
-=======
+## Ruls :
+```js
+var rectcs = require('./node-sort-counting');
+var result = rectcs.countingSort(inputArray,rangeMax);
+```
+ * Sort Array of integers .
+ * Array's element shoud be integers and between 0 and rangeMax
+ * Returns the Sorted Array or -1 if not found valid input.
 
-Only can Sort Array of integers 
-Only Sort integers between 0 and MaxRange
-Returns the Sorted Array or -1 if not found valid input.
-
-example
-=======
-
+## example
 ```js
 var rectcs = require('./node-sort-counting');
 
@@ -237,7 +239,7 @@ Output:
 ```Sorted character array is eeeefggkkorss```
 
 Other Sorting Algorithms :
-
+=====
  * Selection Sort
  * Bubble Sort
  * [Insertion Sort](https://github.com/pooyahatami/Algorithm-Sort-Insertion)
@@ -248,6 +250,6 @@ Other Sorting Algorithms :
  * Bucket Sort
  * ShellSort
 
-References:
+## References:
  * https://en.wikipedia.org/wiki/Counting_sort
  * http://www.geeksforgeeks.org/counting-sort
