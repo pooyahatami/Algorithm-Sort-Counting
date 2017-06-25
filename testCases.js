@@ -6,6 +6,10 @@
  * Best-case performance	O(n+k) comparisons, O(1) swaps
  * Average performance	О(n+k) comparisons, swaps
  * Worst-case space complexity
+ *   where k is the the bigest number and n is the
+ *   size of the input array.
+ *
+ * Author: Pooya Hatami
  */
 
 var rectcs = require('./node-sort-counting');
