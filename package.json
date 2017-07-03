@@ -1,18 +1,51 @@
 {
-  "name": "node-sort-counting",
-  "description": "Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values (kind of hashing). Then doing some arithmetic to calculate the position of each object in the output sequence.",
-  "version": "1.0.1",
-  "repository": {
-    "url": "https://github.com/pooyahatami/Algorithm-Sort-Counting"
+  "_from": "node-sort-counting",
+  "_id": "node-sort-counting@1.0.2",
+  "_inBundle": false,
+  "_integrity": "sha1-1rAOM4bXoRv9Ot03CydOWEEgZFg=",
+  "_location": "/node-sort-counting",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "node-sort-counting",
+    "name": "node-sort-counting",
+    "escapedName": "node-sort-counting",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
-  "main": "node-sort-counting.js",
-  "scripts": {
-    "test": "test-Cases/*.js"
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/node-sort-counting/-/node-sort-counting-1.0.2.tgz",
+  "_shasum": "d6b00e3386d7a11bfd3add370b274e5841206458",
+  "_spec": "node-sort-counting",
+  "_where": "C:\\inetpub\\nodejs",
+  "author": {
+    "name": "Pooya Hatami",
+    "email": "am.hatami@yahoo.com"
   },
-  "author": "Pooya Hatami <am.hatami@yahoo.com>",
+  "bugs": {
+    "url": "https://github.com/pooyahatami/Algorithm-Sort-Counting/issues"
+  },
+  "bundleDependencies": false,
   "dependencies": {},
+  "deprecated": false,
+  "description": "Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values (kind of hashing). Then doing some arithmetic to calculate the position of each object in the output sequence.",
   "devDependencies": {
     "tap": "~0.4.1"
   },
-  "license": "MIT"
+  "homepage": "https://github.com/pooyahatami/Algorithm-Sort-Counting#readme",
+  "license": "MIT",
+  "main": "node-sort-counting.js",
+  "name": "node-sort-counting",
+  "repository": {
+    "url": "git+https://github.com/pooyahatami/Algorithm-Sort-Counting.git"
+  },
+  "scripts": {
+    "test": "test-Cases/*.js"
+  },
+  "version": "2.0.1"
 }
