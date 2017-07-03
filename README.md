@@ -1,19 +1,124 @@
 [![Build Status](https://secure.travis-ci.org/soldair/node-binarysearch.png)](https://github.com/pooyahatami/Algorithm-Sort-Counting/)
 # Algorithm-Sort-Counting
 
-## Brief about Counting Sort 
+## About Counting Sort 
 Counting sort is a sorting technique based on keys between a specific range. It works by counting the number of objects having distinct key values (kind of hashing). Then doing some arithmetic to calculate the position of each object in the output sequence.
 
 ```javascript
  * Counting sort algorithm !
  * Class	Sorting algorithm
  * Data structure	Array
- * Worst-case performance	О(n+k) comparisons, swaps
- * Best-case performance	O(n+k) comparisons, O(1) swaps
- * Average performance	О(n+k) comparisons, swaps
- * Worst-case space complexity
+ * Worst-case performance	O(n+k)
+ * Best-case performance	O(n+k)
+ * Average performance	O(n+k)
+ * Worst-case space complexity 
+ *   where n is the number of elements in input array and k is the range of input.
+ *   size of the input array.
+ *   Note: if k is greater than log(n) then an n*log(n) algorithm would be a
+ *         better fit. In reality we can always change the radix to make k
+ *         less than log(n).
+ *
+ * Author: Pooya Hatami
  ```
- 
+
+## Installation
+
+If you are using a browser, you can download **node-sort-counting.js** from GitHub or just bellow hotlink to it:
+
+```js
+<script src="https://raw.githubusercontent.com/pooyahatami/Algorithm-Sort-Counting/master/node-sort-counting.js"></script>
+```
+
+If you are using node, you can install **node-sort-counting** with npm.
+
+```
+npm install node-sort-counting
+```
+
+## Usage :
+```js
+var nodesort = require('./node-sort-counting');
+var displaymode = "No"; //"Yes";  // "Yes" for more details of algorithm progress 
+...
+nodesort(inputArray, displaymode, function(err,sortRef) {
+        if (err) {
+            // TODO error handeling 
+            }
+	      else {
+           var result = sortRef.countingSort(inputArray);
+           // TODO output 
+	            }
+    });
+```
+
+## Ruls :
+ * Sort Array of integers between 0 and rangeMax
+ * Array's element could not be negative.
+ * Returns error mesage if not found valid input.
+ * Turn On details of Algorithms progress useing : displaymode = "Yes"  
+ ```js
+ var displaymode = "No"; //"Yes";
+ ```
+
+## Example
+```js
+var nodesort = require('./node-sort-counting');
+var displaymode = "No"; //"Yes";  // "Yes" for more details of algorithm progress 
+var base = 10;
+
+var arrin00 = [20, 8 , -11, 12, 22 , 9 , 10 ];
+var arrin01 = [20, 8 , 48, 120, 220 , 390 , 1000 ];
+var arrin02 = [20, 8 , 480 , 120, 220 , 390 , 1000 ];
+var arrin03 = [1120, 800 , 480 , 120, 20 , 390 , 1000 ];
+var arrin04 = ['g', 'e', 'e', 'k', 's', 'f', 'o',
+                      'r', 'g', 'e', 'e', 'k', 's'];
+var arrin05 = [1, 3, 7, 25, 12, 9, 8,
+                      121, 221, 10, 18, 29, 49];
+var arrin06 = [1, 3, -7, 25, 12, 9, 8,
+                      121, 221, -10, 18, 29, 49];
+var arrin07 = [1, 3, 7000000000000000000, 25, 12, 9, 8,
+                      121, 221, 100000000000000000000000000 , 18, 290000000000000000000, 49];
+var arrin08 = [1, 3, 75432, 25, 12, 9, 8,
+                      121, 221, 976562 , 18, 299999, 49];
+var arrin09 = [0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434 , 0.611 , 0.621 ];
+var arrin10 = [1,342, 14,293 , 0.897, 0.565, 0.656, 0.1234, 0.665, 0.3434 , 0.611 , 0.621 ];
+var arrin11 = [5, 8 , 11, 12, 2 , 9 , 10 , 4 , 11, 10, 12, 7, 9 ];
+var arrin12 = "";
+//var arrin13 = [A7,02,22,77,37,15,00,40,B00,75,04,05,07,75,52,12,50,77,71,D07];    //base16
+var arrin14 = [1001,101010,11,10,01,111,100,1000,11100,10110,101,100010,0111,101,11111,1000001,1,0,111,11010];   //base 2
+var arrin15 = [7,2,22,77,37,15,10770,740,70,75,04,5,107,75,52,12,50,177,71,207];   //base 8
+
+
+function solveSorting(inputArray) {
+    var arr_original = inputArray.toString() ;
+    var sortedArray = inputArray;
+
+    nodesort(inputArray, displaymode,  function(err,sortRef) {
+        if (err) {
+	         console.log(err);
+	                }
+	      else {
+           var result = sortRef.countingSort(inputArray);
+	         console.log("Success attempt to sort array \r\n \t ["+arr_original+" ] \r\n and result is : \r\n \t [ "
+                + result + " ]" );
+  
+	      sortedArray = result;
+	            }
+	      console.log("----------------------------------------------------------"); 
+    });
+    
+    return sortedArray;
+};
+
+solveSorting(arrin01);
+solveSorting(arrin00);
+solveSorting(arrin03);
+solveSorting(arrin11);
+solveSorting(arrin12);
+solveSorting(arrin14);
+solveSorting(arrin15);
+```
+
 Let us understand it with the help of an example.
 
 ```javascript
@@ -38,46 +143,7 @@ the output sequence.
   next data 1 at an index 1 smaller than this index.
 ```
 
-## Ruls :
-```js
-var rectcs = require('./node-sort-counting');
-var result = rectcs.countingSort(inputArray,rangeMax);
-```
- * Sort Array of integers .
- * Array's element shoud be integers and between 0 and rangeMax
- * Returns the Sorted Array or -1 if not found valid input.
-
-## example
-```js
-var rectcs = require('./node-sort-counting');
-
-var arrin01 = [20, 8 , 48, 120, 220 , 390 , 1000 ];
-var arrin02 = [20, 8 , 480 , 120, 220 , 390 , 1000 ];
-var arrin03 = [1120, 800 , 480 , 120, 20 , 390 , 1000 ];
-var arrin04 = ['g', 'e', 'e', 'k', 's', 'f', 'o',
-                      'r', 'g', 'e', 'e', 'k', 's'];
-var arrin05 = [1, 3, 7, 25, 12, 9, 8,
-                      121, 221, 10, 18, 29, 49];
-
-
-function solveIS(arr,range) {
-    var arr_original = arr.toString() ;
-    var result = rectcs.countingSort(arr,range);
-    if (result==-1){
-    console.log("Fail attempt to sort array ["+arr_original+" ] by Insertion Sort " );
-    } else {
-    console.log("Success attempt to sort array ["+arr_original+" ] and result is : [ "
-                + result + " ]" );
-    }
-   
-   console.log("----------------------------------------------------------");     
-}
-
-solveIS(arrin01,1000);
-solveIS(arrin05,256);
-solveIS(arrin03,1120);
-```
-
+![Counting Sort](https://raw.githubusercontent.com/pooyahatami/Algorithm-Sort-Counting/master/img/counting-sort.png)
 
 Following is C implementation of counting sort.
 ```C
