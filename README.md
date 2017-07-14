@@ -119,6 +119,8 @@ solveSorting(arrin14);
 solveSorting(arrin15);
 ```
 
+![Counting Sort](https://raw.githubusercontent.com/pooyahatami/Algorithm-Sort-Counting/master/img/Counting_Sort_Animation.gif)
+
 Let us understand it with the help of an example.
 
 ```javascript
